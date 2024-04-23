@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- Include Google Fonts Links for Boston Traffic and Top Secret -->
+   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+   <script>
+      function scrollToPage2() {
+         const page2 = document.querySelector('.page2');
+         page2.scrollIntoView({ behavior: 'smooth' });
+      }
+   </script>
+   <style>
+      body, html {
+         margin: 0;
+         padding: 0;
+         width: 100%;
+         height: 100%;
+         font-family: 'Top Secret', cursive; /* Default fallback font */
+      }
+      .page1 {
+         background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+         background-size: cover; /* Scale the background image to cover the entire container */
+         background-position: center; /* Center the background image */
+         justify-content: center; /* Horizontally center content */
+         align-items: center; /* Vertically center content */
+         height: 100vh; /* Full viewport height */
+         color: white; /* Text color */
+         text-align: center; /* Center-align text */
+         padding: 5px;
+         position: relative; /* Position relative for absolute positioning */
+      }
+      .down-arrow {
+         position: absolute;
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+         cursor: pointer;
+      }
+      .page1 h1 {
+         font-family: 'Nothing You Could Do'; /* Use Boston Traffic font for h1 */
+         font-size: 60px; /* Adjust font size for h1 */
+         /* Add spacing around h1 */
+      }
+      .page1 h4 {
+         font-family: 'Nothing You Could Do'; /* Use Top Secret font for h4 */
+         font-size: 24px; /* Adjust font size for h4 */
+         margin: 10px 0; /* Add spacing around h4 */
+      }
+      .page2 {
+         background-color: rgb(11, 148, 158);
+         height: auto;
+         color: white;
+         text-align: center;
+         padding: 50px;
+         display: flex; 
+         justify-content: center; 
+         align-items: center; 
+      }
+      .page21 {
+         width: 80%;
+         max-height: auto; 
+         background-color: rgb(223, 202, 80);
+         margin: auto;
+         border-radius: 7px;
+         padding: 20px; 
+         overflow-y: auto; 
+      }
+      .page11 {
+         width: 100%;
+         height: auto;
+         margin-top: 80px;
+      }
+      .page3 {
+         background-color: rgb(0, 0, 0);
+         height: 100vh;
+         color: white;
+         text-align: center;
+         padding: 50px;
+         justify-content: center; 
+         align-items: center; 
+      }
+      .page3-content {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         margin-top:200px;
+      }
+      .page3-item {
+         padding: 20px;
+         background-color: rgba(255, 255, 255, 0.2);
+         border-radius: 10px;
+         transition: transform 0.3s ease;
+      }
+      .page3-item:hover {
+         transform: scale(1.1); 
+      }
+      .page3-item img {
+         display: block;
+         width: 70px;
+         height: 70px;
+         border-radius: 50%;
+         margin: 10px;
+      }
+      .page3-item:hover::after {
+         display: block;
+         font-size: 16px;
+         margin-top: 10px;
+         font-weight: bold;
+      }
+   </style>
+</head>
+<body>
+   <div class="page1">
+      <div class="page11">
+         <h1>Sonesh Sri Venkat</h1>
+         <h1>Nekkanti</h1>
+         <h4>I am a Software Developer</h4>
+         <div class="down-arrow" onclick="scrollToPage2()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+         </div>
+      </div>
+   </div>
+   <div class="page2">
+      <div class="page21">
+         <h1 style="text-align: center; font-family: 'Nothing You Could Do';">Resume</h1>
+         <h1>Sonesh Sri Venkat Nekkanti</h1>
+         <div class="contact-info">
+            <p>+918328163571 | soneshsrivenkat@gmail.com | Rajamahendravaram, ANDHRA PRADESH</p>
+         </div>
+         <div class="summary">
+            <h2>Summary</h2>
+            <p>Highly motivated and dedicated student with a strong foundation in Java, responsive web design, JavaScript, and object-oriented programming. Demonstrated proficiency in developing dynamic and user-friendly web applications through effective utilization of front-end and back-end technologies. Possesses a keen eye for detail and a passion for crafting efficient, scalable, and aesthetically pleasing digital solutions. Proven ability to adapt quickly to new technologies and methodologies while collaborating effectively within interdisciplinary teams. Seeking opportunities to leverage technical skills and academic knowledge to contribute to innovative projects and make meaningful contributions in the field of software development.</p>
+         </div>
+         <div class="skills">
+            <h2>Skills</h2>
+            <p>Java, Object Oriented Programming, Responsive Web Design, JavaScript</p>
+         </div>
+         <div class="education">
+            <h2>Education</h2>
+            <p>
+               <strong>Vellore Institute of Technology</strong> | Vellore, Tamil Nadu<br>
+               B.Tech Computer Science and Engineering | 07/2026<br>
+               CGPA—8.8%
+            </p>
+            <p>
+               <strong>Future Kids Educational Society</strong> | Rajamahendravaram, ANDHRA PRADESH<br>
+               10th Grade | 07/2022<br>
+               Percentile—9.3%
+            </p>
+            <p>
+               <strong>Future Kids Educational Society</strong> | Rajamahendravaram, ANDHRA PRADESH<br>
+               12th Grade | 06/2022<br>
+               Percentile—9.1%
+            </p>
+         </div>
+         <div class="languages">
+            <h2>Languages</h2>
+            <p>English, Telugu</p>
+         </div>
+         <div class="certificates">
+            <h2>Certificates</h2>
+            <p>Responsive Web Design, Free Code Camp<br>
+               JavaScript & Data Structures, Free Code Camp</p>
+         </div>
+         <div style="margin: auto; ">
+            <button style="padding: 10px; background-color: aqua; border-radius: 4px; border: white 2px solid; color: black;"><a href="https://drive.google.com/file/d/15OUpD3zL6_c0NQrPY5BaqaL_tL54jECI/view?usp=drive_link" style="text-decoration: none; color: black;">Download</a></button>
+         </div>
+      </div>
+   </div>
+   <div class="page3">
+      <h1>Contact Me</h1>
+      <div class="page3-content">
+         <div class="page3-item" style="margin-left: 50px;">
+            <a href="https://www.instagram.com/sonesh_nekkanti/"><img src="https://i.pinimg.com/736x/8b/54/2b/8b542bb8607e02395e5592c62df41456.jpg" height="100" width="100" alt=""></a>
+         </div>
+         <div class="page3-item" style="margin-left: 50px;">
+            <a href="https://github.com/NSonesh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu7esomngrloanUN5V-4X2Rk9P4W2EcXLN-hGNWwHsOw&s" alt="" height="70" width="70"></a>
+         </div>
+         <div class="page3-item" style="margin-left: 50px;">
+            <a href="https://wa.me/+918328163571"><img src="https://i.pinimg.com/originals/9a/d0/c9/9ad0c968a114c5a978d7f6139e47f7ed.png" alt="" height="70" width="70"></a>
+         </div>
+         <div class="page3-item" style="margin-left: 50px;">
+            <a href="https://g.co/kgs/5FGWoJZ"><img src="https://www.pngitem.com/pimgs/m/23-235941_location-icon-vector-location-logo-hd-png-transparent.png" alt="" height="70" width="70"></a>
+         </div>
+      </div>
+   </div>
+   <footer>
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 30px; margin-top: 25px; text-align: center;">
+          <nav>
+              <ul style="display: flex; justify-content: space-around; list-style-type: none; padding: 0;">
+                  <li><a href="aboutme.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">About Me</a></li>
+                  <li><a href="resume.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Resume & Contact</a></li>
+                  <li><a href="skills.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Skills</a></li>
+                  <li><a href="projects.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Projects</a></li>
+              </ul>
+          </nav>
+          <div style="margin-top: 5px;">
+              <h6 style="color: #fff;">&copy; 2024. All rights reserved. Sonesh Sri Venkat Nekkanti</h6>
+          </div>
+      </div>
+  </footer>  
+</body>
+</html>

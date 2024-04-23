@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         background-color: black;
+         color: white;
+         font-family: Arial, sans-serif;
+         text-align: center;
+         margin: 0;
+         padding: 0;
+         background-image:url("https://i.pinimg.com/1200x/fa/38/31/fa3831976bbbcdbefac1a336b91246c1.jpg");
+         background-size: cover;
+         background-repeat: no-repeat;
+      }
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 75%;
+         padding: 10px;
+         border-radius: 25px;
+         margin: auto;
+         margin-top: 10px;
+         background-color: rgba(0, 0, 0, 0.35);
+         backdrop-filter: blur(10px);
+         margin-bottom: 10px;
+      }
+      .top-section, .bottom-section {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         width: 100%;
+         margin: 20px;
+      }
+      .column {
+         width: 200px;
+         height: 200px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 2px solid white;
+         border-radius: 50%;
+         padding: 20px;
+         box-sizing: border-box;
+      }
+      .top-left:hover, .top-right:hover,
+      .bottom-left:hover, .bottom-right:hover {
+         box-shadow: 0px 0px 20px 5px white;
+         border: 2px solid orange;
+      }
+      #content {
+         display: none;
+         text-align: left;
+         padding: 20px;
+         color: white;
+      }
+      #backButton {
+         margin-top: 20px;
+         background-color: orange;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         display: none;
+      }
+   </style>
+</head>
+<body>
+   <div class="container" id="container">
+      <div class="top-section">
+         <div class="column top-left">
+            <a href="#" class="link" data-content="dataScience" style="text-decoration:none; color:white;">Introduction to Data Science</a>
+         </div>
+         <div class="column top-right">
+            <a href="#" class="link" data-content="java" style="text-decoration:none; color:white;">JAVA</a>
+         </div>
+      </div>
+      <h1>SKILLS</h1>
+      <div class="bottom-section">
+         <div class="column bottom-left">
+            <a href="#" class="link" data-content="webDesign" style="text-decoration:none; color:white;">Responsive Web Designing</a>
+         </div>
+         <div class="column bottom-right">
+            <a href="#" class="link" data-content="jsDsa" style="text-decoration:none; color:white;">JavaScript and DSA</a>
+         </div>
+      </div>
+      <div id="content"></div>
+      <button id="backButton" onclick="hideContent()">Back</button>
+   </div>
+   <footer>
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 30px; margin-top: 25px; text-align: center;">
+          <nav>
+              <ul style="display: flex; justify-content: space-around; list-style-type: none; padding: 0;">
+                  <li><a href="aboutme.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">About Me</a></li>
+                  <li><a href="resume.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Resume & Contact</a></li>
+                  <li><a href="skills.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Skills</a></li>
+                  <li><a href="projects.html" style="text-decoration: none; color: #fff; padding: 10px; border: 1px solid white; border-radius: 5px;">Projects</a></li>
+              </ul>
+          </nav>
+          <div style="margin-top: 5px;">
+              <h6 style="color: #fff;">&copy; 2024. All rights reserved. Sonesh Sri Venkat Nekkanti</h6>
+          </div>
+      </div>
+  </footer> 
+   <script>
+      const contentDiv = document.getElementById('content');
+      const backButton = document.getElementById('backButton');
+      const links = document.querySelectorAll('.link');
+
+      links.forEach(link => {
+         link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const content = e.target.getAttribute('data-content');
+            displayContent(content);
+            scrollToContent();
+         });
+      });
+
+      function displayContent(content) {
+         const contentMap = {
+            'dataScience': "<h2 id='dataScience'>Introduction to Data Science</h2><p>Data science is a multidisciplinary field that uses scientific methods, algorithms, and systems to extract knowledge and insights from structured and unstructured data.</p> <p>I'm thrilled to have delved into the world of data analytics, data engineering, and machine learning. Throughout this program, I've gained essential knowledge that is shaping the future of business, healthcare, education, and beyond.</p><p>In Module 1,Experience Analytics, I learned how to interpret data effectively to understand user experiences and behaviors, laying a strong foundation for making data-driven decisions.</p> <p>Module 2, Data Collection and Storage, equipped me with skills to gather and manage data efficiently, ensuring data integrity and accessibility for analysis and decision-making processes.</p><p>Module 3, Artificial Intelligence and Machine Learning, introduced me to the exciting realm of AI and its applications in developing predictive models and automated decision-making systems.</p><p>Lastly, Module 4, Embarking on Your Career in Data Analytics, provided valuable insights into potential career paths and how to leverage my newfound skills in the professional world.</p><p>Now that I've completed this course, I feel well-prepared to apply my knowledge and contribute to the growing demand for data science professionals across various industries. I'm eager to keep exploring, practicing, and applying what I've learned to excel in my data science journey. Here's to the exciting road ahead!</p>",
+            'java': "<h2 id='java'>JAVA</h2><p>Java is a widely-used programming language known for its portability, security features, and robustness. It's used in a variety of applications, from web development to mobile apps and enterprise systems.</p> <h1>Completion of Advanced Java Certification Training</h1><p>I am thrilled to announce that I have successfully completed the Advanced Java Certification Training! This comprehensive program has equipped me with a deep understanding of Java programming, covering everything from foundational concepts to advanced techniques.</p><p>Throughout the course, I mastered Core Java 8, operators, arrays, loops, methods, constructors, and gained hands-on experience in JDBC and the JUnit framework. I also explored Java Servlets, SOA (Service-Oriented Architecture), web services, J2EE, HTTP protocol, and HTML. </p><p>Furthermore, I delved into enterprise-level Java development with Hibernate and Spring frameworks, learning about multithreading, string handling, and various exception handling techniques. The course also provided extensive coverage of the Java Collections Framework.</p><p>I am confident in my ability to leverage these skills to develop robust and scalable Java applications. Completing this certification has been a significant milestone in my journey as a Java developer, and I look forward to applying my knowledge to real-world projects.</p><h2>Projects Completed:</h2><ul><li>Implemented two web-based projects</li><li>Completed 35 coding-related exercises on Core Java 8</li></ul>",'webDesign': "<h2 id='webDesign'>Responsive Web Designing</h2><p>Responsive web design ensures web pages render well on various devices and window or screen sizes. It focuses on providing an optimal viewing and interaction experience.</p><p>In this Responsive Web Design Certification, I've had the opportunity to explore the fundamental languages used by developers to craft webpages: HTML (Hypertext Markup Language) for structuring content, and CSS (Cascading Style Sheets) for defining design elements.</p><h3>Courses Completed:</h3><ol><li><strong>Learn HTML by Building a Cat Photo App:</strong> This course introduced me to HTML tags and their role in creating webpage structure. Through building a cat photo app, I gained practical experience in adding various elements to a webpage.</li><li><strong>Learn Basic CSS by Building a Cafe Menu:</strong> I deepened my understanding of CSS by styling a cafe menu, learning how to apply colors, fonts, and layouts to enhance webpage design.</li><li><strong>Learn CSS Colors by Building a Set of Colored Markers:</strong> This course focused on CSS color properties, allowing me to create a set of colorful markers and understand different color models.</li><li><strong>Learn HTML Forms by Building a Registration Form:</strong> By creating a registration form, I mastered HTML form elements and attributes necessary for collecting user data.</li><li><strong>Learn the CSS Box Model by Building a Rothko Painting:</strong> Through replicating a Rothko painting using CSS properties, I honed my skills in understanding the CSS box model and layout fundamentals.</li><li><strong>Learn CSS Flexbox by Building a Photo Gallery:</strong> This course introduced Flexbox, enabling me to build a responsive photo gallery layout efficiently.</li><li><strong>Learn Typography by Building a Nutrition Label:</strong> I explored typography principles in CSS by designing a nutrition label, focusing on font styles, spacing, and readability.</li> <li><strong>Learn Accessibility by Building a Quiz:</strong> I learned best practices for web accessibility while creating a quiz site, emphasizing inclusive design and usability considerations.</li></ol><h3>Certification Projects Completed:</h3><ul><li><strong>Survey Form Certification Project:</strong> I designed a survey form to collect user data, applying HTML form elements and CSS styling to create an intuitive and visually appealing interface.</li>  <li><strong>Tribute Page Certification Project:</strong> For this project, I created a tribute page dedicated to a subject of my choice, demonstrating proficiency in HTML, CSS, and overall webpage structure.</li></ul><p><strong>In Progress:</strong></p><p>Currently working on furthering my CSS knowledge by utilizing pseudo-selectors to style a balance sheet effectively.</p><p><strong>Upcoming Courses and Projects:</strong></p> <ul><li>Learn Intermediate CSS by Building a Cat Painting</li><li>Learn Responsive Web Design by Building a Piano (Certification Project: Technical Documentation Page)</li><li>Learn CSS Variables by Building a City Skyline</li><li>Learn CSS Grid by Building a Magazine (Certification Project: Product Landing Page)</li><li>Learn CSS Animation by Building a Ferris Wheel</li><li>Learn CSS Transforms by Building a Penguin (Certification Project: Personal Portfolio Webpage)</li></ul>",
+            'jsDsa': "<h2 id='jsDsa'>JavaScript and DSA</h2><p>JavaScript is a versatile scripting language used for web development. Data Structures and Algorithms (DSA) are essential concepts for efficient problem-solving in programming.</p>  <h1>JavaScript Algorithm and Data Structures Certification</h1> <p>Throughout the JavaScript Algorithm and Data Structures Certification, I've embarked on an immersive journey into JavaScript programming, exploring fundamental concepts and practical applications to build interactive web solutions.</p><h2>Courses</h2><ul><li><h3>Learn Basic JavaScript by Building a Role Playing Game</h3><p>Honed my understanding of variables, arrays, objects, loops, functions, and conditional statements while creating an engaging role-playing game from scratch.</p></li><li><h3>Learn Form Validation by Building a Calorie Counter</h3><p>Implemented robust form validation techniques, essential for creating user-friendly and error-free web forms.</p></li><li><h3>Learn Basic String and Array Methods by Building a Music Player</h3><p>Delved into JavaScript's string and array manipulation capabilities, enhancing my ability to handle and manipulate data effectively within web applications.</p></li><li><h3>Learn the Date Object by Building a Date Formatter</h3><p>Worked with dates and times in JavaScript, crucial for developing applications that require date-based functionalities.</p></li><li><h3>Learn localStorage by Building a Todo App</h3><p>Demonstrated the importance of client-side storage, empowering me to create persistent and efficient todo list applications.</p></li><li><h3>Learn Recursion by Building a Decimal to Binary Converter</h3><p>Deepened my understanding of recursion, a powerful technique for solving complex problems efficiently.</p></li><li><h3>Learn Regular Expressions by Building a Spam Filter</h3><p>Explored regular expressions and algorithmic thinking, acquiring essential skills for handling text patterns.</p></li><li><h3>Learn Basic Algorithmic Thinking by Building a Number Sorter</h3><p>Developed algorithmic solutions through real-world projects.</p></li><li><h3>Learn Basic OOP by Building a Shopping Cart</h3><p>Introduced to Object-Oriented Programming (OOP) principles, emphasizing code organization and reusability.</p></li><li><h3>Learn Intermediate OOP by Building a Platformer Game</h3><p>Furthered my understanding of OOP principles through real-world projects.</p></li></ul><h2>Projects</h2><ul><li>Palindrome Checker</li><li>Roman Numeral Converter</li><li>Telephone Number Validator</li><li>Cash Register web app</li></ul><p>Overall, this certification has been an enriching experience, equipping me with essential JavaScript competencies and problem-solving strategies necessary for developing robust and interactive web applications.</p>"
+         };
+
+         if (content in contentMap) {
+            contentDiv.innerHTML = contentMap[content];
+         }
+
+         // Show content and back button
+         contentDiv.style.display = 'block';
+         backButton.style.display = 'block';
+      }
+
+      function scrollToContent() {
+         const yOffset = -60; // Offset to adjust scroll position
+         const targetElement = document.getElementById('content');
+
+         if (targetElement) {
+            const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+         }
+      }
+
+      function hideContent() {
+         // Hide content and back button
+         contentDiv.style.display = 'none';
+         backButton.style.display = 'none';
+         contentDiv.innerHTML = ""; // Clear content
+      }
+   </script>
+</body>
+</html>

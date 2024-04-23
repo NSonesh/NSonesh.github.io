@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video with Columns and Blur</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-wrap {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .video-wrap video {
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95%;
+            padding-bottom: 0px;
+            
+        }
+        .content1
+        {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95%;
+            margin-top: 0;
+            margin-bottom: 200px;
+        }
+        .content2
+        {
+         position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 95%;
+            margin-top: 0;
+            
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .column-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            backdrop-filter: blur(10px); /* Apply a blur effect */
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+        .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(66, 0, 0);
+  border: 4px solid #040039;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: -12.5%;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+.content4 {
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  position: relative;
+  border-radius: 6px;
+}
+    </style>
+</head>
+<body>
+
+<div class="video-background">
+    <div class="video-wrap">
+        <video autoplay loop muted>
+            <source src="https://videos.pexels.com/video-files/2324166/2324166-sd_640_360_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<div class="content">
+   <div style="width: 90%;" class="intro">
+    <div style="display: flex; width: 90%;">
+      <div style="width: 50%;">
+         <h1>Sonesh Sri Venkat Nekkanti</h1>
+         <h2>I am a Software Devoloper</h2>
+         <p>I am Studing in VIT Vellore. Currently persuing Bachelor's in Computer Science & Engineering</p>
+      </div> 
+      <div style="width: 50%; background-color: rgba(0, 0, 0, 0.437);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;padding-top: 10px; padding-bottom: 10px;"><img src="img/sonesh2.jpg" alt="" height="300" width="300"></div>
+    </div>
+    <div style="width: 100%; margin-top: 30px;">
+      My roots lie in Rajahmundry, Andhra Pradesh, where my parents - Nekkanti Bhaskar Chowdary and Nekkanti Sridevi - raised me. Their unwavering support and guidance have helped me become the person I am today.Rajahmundry is a city that holds a special place in my heart. Not only did I complete my primary, secondary, and intermediate education there, but I also fell in love with its picturesque location beside the beautiful Godavari river. Whenever I think of Rajahmundry, I am filled with a sense of nostalgia and longing to return to its serene surroundings. In my free time, I love to explore the city and its surroundings by traveling and off-roading. There is always something new and exciting to discover in Rajahmundry, and I am grateful for the unforgettable memories I have made there.
+    </div>
+   </div>
+</div>
+<div class="content1">
+   <div>
+      <h1>Linkedin Profile</h1>
+      <a href="https://www.linkedin.com/in/sonesh-sri-venkat-55b39a245/"><img src="https://static.licdn.com/aero-v1/sc/h/4221chis9yaztef5phd0v3lal" alt=""></a>
+   </div>
+</div>
+<div class="content2">
+   <div><h1>Timeline</h1></div>
+   <div class="timeline">
+     <div class="container left">
+       <div class="content4">
+         <h2>2006-2018</h2>
+         <p>Primary School</p>
+       </div>
+     </div>
+     <div class="container right">
+       <div class="content4">
+         <h2>2019-2020</h2>
+         <p>Secondary School</p>
+       </div>
+     </div>
+     <div class="container left">
+       <div class="content4">
+         <h2>2020-2022</h2>
+         <p>Intermediate</p>
+       </div>
+     </div>
+     <div class="container right">
+       <div class="content4">
+         <h2>2022-2026</h2>
+         <p>Bachelor's in Computer Science & Engineering</p>
+       </div>
+     </div>
+   </div>
+ </div>
+ <footer>
+  <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; margin-top: 200px;">
+      <nav>
+          <ul style="display: flex; justify-content: space-around; list-style-type: none; padding: 0;">
+              <li ><a href="aboutme.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">AboutMe</a></li>
+              <li><a href="resume.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">Resume & Contact</a></li>
+              <li><a href="skills.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">Skills</a></li>
+              <li><a href="projects.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px; padding: 10px;">Projects</a></li>
+          </ul>
+      </nav>
+      <div>
+        <h6 style="text-align: center; margin-top: 20px; color:#fff">@ALL RIGHTS RESERVED 2024. Sonesh sri venkat Nekkanti</h6>
+      </div>
+  </div>
+  
+</footer>
+</body>
+</html>

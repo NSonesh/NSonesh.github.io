@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-radius: 10px;
+            height: 600px;
+        }
+
+        .project {
+            width: calc(20% - 20px); /* Calculate width for 4 columns with margin between */
+            padding: 10px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+            cursor: pointer;
+            transition: background-color 0.3s ease, width 0.3s ease;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .project:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white on hover */
+            width: calc(35% - 20px);
+        }
+
+        .project h2 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            display: none; /* Initially hide project description */
+        }
+
+        .project:hover p {
+            display: block; /* Show project description on hover */
+        }
+
+        @media (max-width: 600px) {
+            .project {
+                width: 100%; /* Full width on smaller screens (1 column) */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Projects</h1>
+    <div class="container">
+        <div class="project">
+            <h2>Bank ATM Interface Using Java</h2>
+            <p>
+                I am thrilled to announce that I have successfully completed my ATM project! This endeavor involved developing a fully functional automated teller machine (ATM) simulation. Throughout the project, I implemented key features such as user authentication, account balance inquiries, cash withdrawals, deposits, and transaction logging.
+
+                The ATM project challenged me to apply fundamental programming concepts, including user input handling, data validation, and file operations for account management. By meticulously designing and implementing these functionalities, I gained valuable experience in software development, particularly in the context of financial systems.
+
+                Overall, completing this ATM project has been a rewarding journey, providing me with practical insights into software engineering principles and equipping me with the skills necessary to tackle complex real-world problems in the realm of banking technology. I look forward to applying these learnings to future projects and continuing to refine my expertise in software development.
+            </p>
+        </div>
+        <div class="project">
+            <h2>Virtual Doctor Application</h2>
+            <p>
+                During the 2020 pandemic, the need for virtual healthcare solutions increased significantly. This application aims to provide remote medical consultations and prescriptions, ensuring safety and convenience for both patients and healthcare providers.
+            </p>
+            <!-- Add image or additional details if needed -->
+        </div>
+        <div class="project">
+            <h2>E-commerce Website with Node.js</h2>
+            <p>
+                Developed a full-fledged e-commerce website using Node.js, Express, and MongoDB. Implemented features such as user authentication, product catalog management, cart functionality, and secure payment processing.
+            </p>
+            <!-- Add image or additional details if needed -->
+        </div>
+        <div class="project">
+            <h2>Social Media Dashboard with React</h2>
+            <p>
+                Created a responsive social media dashboard using React.js and Redux. Implemented interactive data visualization, user profiles, and real-time updates using RESTful APIs.
+            </p>
+            <!-- Add image or additional details if needed -->
+        </div>
+    </div>
+    <footer>
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; margin-top: 200px;">
+          <nav>
+              <ul style="display: flex; justify-content: space-around; list-style-type: none; padding: 0;">
+                  <li ><a href="aboutme.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">AboutMe</a></li>
+                  <li><a href="resume.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">Resume & Contact</a></li>
+                  <li><a href="skills.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px;padding: 10px;">Skills</a></li>
+                  <li><a href="projects.html" style="text-decoration: none; color: #fff; border:1px dotted white; border-radius: 5px; padding: 10px;">Projects</a></li>
+              </ul>
+          </nav>
+          <div>
+            <h6 style="text-align: center; margin-top: 20px; color:#fff">@ALL RIGHTS RESERVED 2024. Sonesh sri venkat Nekkanti</h6>
+          </div>
+      </div>
+      
+    </footer>
+</body>
+</html>

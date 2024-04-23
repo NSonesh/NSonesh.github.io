@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         background-color: black;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         background-image:url("https://i.pinimg.com/736x/6e/e1/91/6ee19142a58f28b93766a9f44663a540.jpg") ;
+      }
+
+      .container {
+         position: relative;
+         width: 600px;
+         height: 300px;
+         margin-top: 100px;
+         overflow: hidden;
+         margin: auto;
+         margin-top: 100px;
+      }
+
+      .image {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         object-fit: cover;
+         cursor: pointer; /* Add cursor pointer for clickable image */
+      }
+
+      .anchor {
+         position: absolute;
+         width: 150px;
+         height: 75px;
+         color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
+         border: 2px white solid;
+         border-radius: 30px;
+         opacity: 0; /* Initially hidden */
+         transition: opacity 0.3s ease;
+      }
+
+      .anchor:nth-child(1) { top: 0; left: 0; }
+      .anchor:nth-child(2) { top: 0; right: 0; }
+      .anchor:nth-child(3) { bottom: 0; left: 0; }
+      .anchor:nth-child(4) { bottom: 0; right: 0; }
+
+      h1 {
+         text-align: center;
+         color: white;
+         margin-bottom: 50px;
+         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+      }
+      a:hover
+      {
+         border: 2px double slategrey;
+         color: blanchedalmond;
+         
+      }
+   </style>
+</head>
+<body>
+   <h1>Welcome to My Portfolio</h1>
+   <div class="container" onclick="toggleAnchors()">
+      <img src="img/sonesh.jpg" alt="Image" class="image">
+      <a href="src/aboutme.html" class="anchor">About Me</a>
+      <a href="src/skills.html" class="anchor">Skills</a>
+      <a href="src/projects.html" class="anchor">Projects</a>
+      <a href="src/resume.html" class="anchor">Resume & Contact</a>
+   </div>
+
+   <script>
+      function toggleAnchors() {
+         var anchors = document.querySelectorAll('.anchor');
+         anchors.forEach(function(anchor) {
+            anchor.style.opacity = anchor.style.opacity === '1' ? '0' : '1';
+         });
+      }
+   </script>
+</body>
+</html>
